@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+:root {
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+
+    --color-brown-800: hsl(14, 45%, 36%);
+
+    --color-red-800: hsl(332, 51%, 32%);
+    --color-rose-50: hsl(330, 100%, 98%);
+
+    --font-family-young-serif: "Young Serif", serif;
+    --font-family-outfit: "Outfit", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-stone-100);
+    padding: 5rem 0;
+}
+section {
+    width: clamp(500px, 52%, 80%);
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.25rem;
+    gap: 1.5rem;
+    background-color: #fff; 
+    border-radius: 14px;
+}
+section img {
+    width: 100%;
+    border-radius: 14px;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+.content h1 {
+    font-family: var(--font-family-young-serif);
+    font-size: 2.25rem;
+    color: var(--color-stone-900);
+    font-weight: 400;
+}
+.content p {
+    font-family: var(--font-family-outfit);
+    color: var(--color-stone-600);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.preparation {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-rose-50);
+    padding: 1.5rem;
+    gap: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+.preparation h3 {
+    font-family: var(--font-family-outfit);
+    font-weight: 700;
+    color: var(--color-red-800);
+}
+.preparation ul {
+    margin-left: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.preparation li {
+    padding-left: 1rem;
+    font-family: var(--font-family-outfit);
+    font-weight: 500;
+    color: var(--color-stone-600);
+}
+.preparation li::marker {
+    color: var(--color-red-800);
+    font-size: 0.9rem;
+}
+.preparation h4 {
+    display: inline;
+    font-weight: 700;
+    color: var(--color-stone-600);
+}
+.content h2 {
+    font-family: var(--font-family-young-serif);
+    font-weight: 400;
+    font-size: 1.95rem;
+    color: var(--color-brown-800);
+}
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ingredients ul {
+    margin-left: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ingredients li {
+    padding-left: 1rem;
+    font-family: var(--font-family-outfit);
+    font-weight: 500;
+    color: var(--color-stone-600);
+}
+.ingredients li::marker {
+    color: var(--color-brown-800);
+    font-size: 0.9rem;
+}
+hr {
+    margin: 1rem 0;
+    border-top: 1px solid;
+    border-color: var(--color-stone-150);
+}
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.instructions ol {
+    margin-left: 1.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.instructions li {
+    padding-left: 1rem;
+    font-family: var(--font-family-outfit);
+    font-weight: 500;
+    color: var(--color-stone-600);
+}
+.instructions li::marker {
+    color: var(--color-brown-800);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.instructions h4 {
+    display: inline;
+    font-weight: 700;
+    color: var(--color-stone-600);
+}
+.nutrition {
+    display: flex;
+    flex-direction: column;
+}
+.nutrition p {
+    margin: 1rem 0;
+}
+.nutrition hr {
+    margin: 0.65rem 0;
+}
+.calories,
+.carbs,
+.protein,
+.fat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.calories p,
+.carbs p,
+.protein p,
+.fat p {
+    margin: 0;
+    margin-left: 2rem;
+    color: var(--color-stone-600);
+}
+.calories span,
+.carbs span,
+.protein span,
+.fat span {
+    color: var(--color-brown-800);
+    font-family: var(--font-family-outfit);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        padding: 0;
+    }
+}
